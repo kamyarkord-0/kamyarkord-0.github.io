@@ -1,0 +1,350 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Kamyar Kord — Energy Engineer — Building Energy Modeling</title>
+  <meta name="description" content="Energy Engineer — Building Energy Modeling. LEED v4 simulations with EnergyPlus/DesignBuilder; HVAC analysis and optimization." />
+  <meta name="theme-color" content="#0f172a" />
+  <link rel="icon" href="assets/favicon.svg" type="image/svg+xml" />
+  <link rel="stylesheet" href="styles.css" />
+  <style>
+    #themeToggle svg{width:20px;height:20px;vertical-align:middle}
+  </style>
+</head>
+<body class="light">
+  <a class="skip-link" href="#main" data-i18n="skip">Skip to content</a>
+
+  <header class="site-header" role="banner">
+    <nav class="nav container" aria-label="Primary">
+      <a class="brand" href="#" data-i18n="brand">Kamyar Kord</a>
+      <button class="nav-toggle" aria-expanded="false" aria-controls="menu">Menu</button>
+      <ul id="menu" class="menu">
+        <li><a href="#about" data-i18n="nav_about">About</a></li>
+        <li><a href="#experience" data-i18n="nav_experience">Experience</a></li>
+        <li><a href="#education" data-i18n="nav_education">Education</a></li>
+        <li><a href="#projects" data-i18n="nav_projects">Projects</a></li>
+        <li><a href="#skills" data-i18n="nav_skills">Skills</a></li>
+        <li><a href="#contact" data-i18n="nav_contact">Contact</a></li>
+
+        <!-- Language switcher -->
+        <li>
+          <div class="lang-switch" role="group" aria-label="Language">
+            <button type="button" data-lang="en" class="lang-btn active">EN</button>
+            <button type="button" data-lang="it" class="lang-btn">IT</button>
+          </div>
+        </li>
+
+        <!-- Theme toggle -->
+        <li>
+          <button id="themeToggle" class="ghost" aria-pressed="false" title="Toggle theme" aria-label="Toggle theme">
+            <svg id="icon-sun" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="5"/><line x1="12" y1="1" x2="12" y2="3"/><line x1="12" y1="21" x2="12" y2="23"/><line x1="4.22" y1="4.22" x2="5.64" y2="5.64"/><line x1="18.36" y1="18.36" x2="19.78" y2="19.78"/><line x1="1" y1="12" x2="3" y2="12"/><line x1="21" y1="12" x2="23" y2="12"/><line x1="4.22" y1="19.78" x2="5.64" y2="18.36"/><line x1="18.36" y1="5.64" x2="19.78" y2="4.22"/></svg>
+            <svg id="icon-moon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="display:none"><path d="M21 12.79A9 9 0 1111.21 3 7 7 0 0021 12.79z"/></svg>
+          </button>
+        </li>
+      </ul>
+    </nav>
+  </header>
+
+  <!-- Split hero -->
+  <section class="hero-split" aria-label="Intro">
+    <div class="hero-left">
+      <p class="eyebrow" data-i18n="eyebrow">Portfolio</p>
+      <h1><span data-i18n="hero_title_1">Energy Engineer</span> — <span class="emph" data-i18n="hero_title_2">Building Energy Modeling</span></h1>
+      <p class="lead" data-i18n="hero_lead">
+        I design & simulate HVAC systems and optimize energy performance for LEED v4.
+        I work with geothermal & multipurpose heat pumps and validate solutions in EnergyPlus & DesignBuilder.
+      </p>
+
+      <!-- Tools -->
+      <div class="tools">
+        <a href="https://designbuilder.co.uk" target="_blank" rel="noopener" title="DesignBuilder">
+          <img src="assets/logo-designbuilder.png" alt="DesignBuilder logo">
+        </a>
+        <a href="https://energyplus.net" target="_blank" rel="noopener" title="EnergyPlus">
+          <img src="assets/logo-energyplus.png" alt="EnergyPlus logo">
+        </a>
+        <a href="https://www.python.org" target="_blank" rel="noopener" title="Python">
+          <img src="assets/logo-python.png" alt="Python logo">
+        </a>
+      </div>
+
+      <div class="cta-row">
+        <a class="btn" href="assets/Resume.pdf" download data-i18n="cta_cv">Download CV</a>
+        <a class="btn ghost" href="#projects" data-i18n="cta_work">See my work</a>
+      </div>
+
+      <ul class="meta">
+        <li>📍 <span data-i18n="meta_location">Padova, Italy</span></li>
+        <li>🛠 <span data-i18n="meta_tools">DesignBuilder • EnergyPlus • Python</span></li>
+      </ul>
+    </div>
+
+    <!-- Dynamic right visual -->
+    <div class="hero-right" id="tiltArea">
+      <div class="blob"></div>
+      <div class="ring r1"></div>
+      <div class="ring r2"></div>
+      <div class="dots"></div>
+      <img class="hero-photo" src="assets/banner.png" alt="Portrait of Kamyar Kord" />
+      <svg class="wave" viewBox="0 0 1440 120" preserveAspectRatio="none" aria-hidden="true">
+        <path d="M0,64 C220,120 480,0 720,64 C960,128 1200,120 1440,80 L1440,120 L0,120 Z"></path>
+      </svg>
+    </div>
+  </section>
+
+  <main id="main" class="container">
+    <section id="about" class="section reveal">
+      <h2 data-i18n="about_h">About</h2>
+      <p data-i18n="about_p">
+        I’m an Energy Engineer focused on building energy modeling, HVAC system design, and LEED v4 performance
+        optimization. I translate complex simulations into clear decisions that reduce peak loads, cut energy, and
+        meet comfort targets.
+      </p>
+    </section>
+
+    <!-- EXPERIENCE -->
+<section id="experience" class="section reveal">
+  <h2 data-i18n="exp_h">Experience</h2>
+  <ol class="experience-list">
+    <!-- Prisma -->
+    <li class="exp-card">
+      <a class="exp-logo-link" href="https://www.prismaengineering.it/" target="_blank" rel="noopener" title="Prisma Engineering website">
+        <img class="exp-logo" src="assets/prisma-logo.png" alt="Prisma Engineering logo" width="48" height="48" loading="lazy">
+      </a>
+      <div class="exp-body">
+        <h3 class="exp-role" data-i18n="exp1_role">Energy Engineer (Internship)</h3>
+        <p class="exp-meta">Prisma Engineering · Padova, Italy · 2024</p>
+        <p data-i18n="exp1_desc">Worked on HVAC design and building energy modeling using DesignBuilder, EnergyPlus, and Python. Focused on LEED v4 performance optimization for sustainable building projects.</p>
+      </div>
+    </li>
+
+    <!-- NISOC -->
+    <li class="exp-card">
+      <img class="exp-logo" src="assets/nisoc-logo.png" alt="NISOC logo" width="48" height="48" loading="lazy">
+      <div class="exp-body">
+        <h3 class="exp-role" data-i18n="exp2_role">Petroleum Engineer (Internship)</h3>
+        <p class="exp-meta">National Iranian South Oil Company (NISOC) · Ahvaz, Iran · 2021</p>
+        <p data-i18n="exp2_desc">Contributed to petroleum engineering projects with emphasis on drilling operations and production optimization.</p>
+      </div>
+    </li>
+
+    <!-- North Drilling Company (NDC) -->
+    <li class="exp-card">
+      <a class="exp-logo-link" href="https://www.ndco.ir/" target="_blank" rel="noopener" title="North Drilling Company website">
+        <img class="exp-logo" src="assets/ndc-logo.png" alt="North Drilling Company logo" width="48" height="48" loading="lazy">
+      </a>
+      <div class="exp-body">
+        <h3 class="exp-role" data-i18n="exp3_role">Drilling Engineer (Internship)</h3>
+        <p class="exp-meta">North Drilling Company (NDC) · Tehran, Iran · 2019</p>
+        <p data-i18n="exp3_desc">Assisted in drilling operations, safety supervision, and technical documentation for large-scale oil projects.</p>
+      </div>
+    </li>
+  </ol>
+</section>
+
+
+    <!-- EDUCATION -->
+    <section id="education" class="section reveal">
+      <h2 data-i18n="edu_h">Education</h2>
+      <ol class="experience-list">
+        <li class="exp-card">
+          <img class="exp-logo" src="assets/logo-padova.png" alt="University of Padova logo" width="48" height="48" loading="lazy">
+          <div class="exp-body">
+            <div class="exp-header">
+              <h3 class="exp-title" data-i18n="edu_padova_title">Università degli Studi di Padova</h3>
+              <span class="exp-type" data-i18n="edu_padova_deg">Master’s degree, Energy Engineering</span>
+            </div>
+            <div class="exp-sub">
+              <span class="exp-dates" data-i18n="edu_padova_dates">Sep 2022 – Jun 2025</span>
+            </div>
+          </div>
+        </li>
+
+        <li class="exp-card">
+          <img class="exp-logo" src="assets/logo-iau-srb.png" alt="Islamic Azad University SRB logo" width="48" height="48" loading="lazy">
+          <div class="exp-body">
+            <div class="exp-header">
+              <h3 class="exp-title" data-i18n="edu_iau_title">Islamic Azad University — Science & Research Branch</h3>
+              <span class="exp-type" data-i18n="edu_iau_deg">B.E., Petroleum Engineering</span>
+            </div>
+            <div class="exp-sub">
+              <span class="exp-dates" data-i18n="edu_iau_dates">Oct 2014 – Nov 2018</span>
+            </div>
+          </div>
+        </li>
+      </ol>
+    </section>
+
+    <section id="projects" class="section reveal">
+      <h2 data-i18n="proj_h">Projects</h2>
+      <p data-i18n="proj_p">Highlight your key projects here.</p>
+    </section>
+
+    <section id="skills" class="section reveal">
+      <h2 data-i18n="skills_h">Skills</h2>
+      <p>EnergyPlus · DesignBuilder · HVAC · Python · Data Analysis · LEED v4</p>
+    </section>
+
+    <section id="contact" class="section reveal">
+      <h2 data-i18n="contact_h">Contact</h2>
+      <ul class="contact-cards">
+        <li><strong data-i18n="contact_email_l">Email:</strong>
+          <a href="mailto:Kamyarkord@yahoo.com">Kamyarkord@yahoo.com</a>
+        </li>
+        <li><strong>LinkedIn:</strong>
+          <a href="https://www.linkedin.com/in/kamyar-kord-70038923b" target="_blank" rel="noopener">
+            linkedin.com/in/kamyar-kord-70038923b
+          </a>
+        </li>
+        <li><strong data-i18n="contact_phone_l">Phone:</strong>
+          <a href="tel:+393444261372">+39 344 426 1372</a>
+        </li>
+        <li><strong data-i18n="contact_loc_l">Location:</strong> <span data-i18n="loc_padova">Padova, Italy</span></li>
+      </ul>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container footer-inner">
+      <p>© <span id="year"></span> Kamyar Kord. All rights reserved.</p>
+    </div>
+  </footer>
+
+  <script>
+    // THEME
+    const themeBtn = document.getElementById('themeToggle');
+    const root = document.body;
+    const sunIcon = document.getElementById('icon-sun');
+    const moonIcon = document.getElementById('icon-moon');
+    const THEME_KEY = 'pref-theme';
+    function applyTheme(pref){
+      if(pref==='dark'){ root.classList.remove('light'); root.classList.add('dark'); sunIcon.style.display='none'; moonIcon.style.display='inline'; }
+      else{ root.classList.remove('dark'); root.classList.add('light'); sunIcon.style.display='inline'; moonIcon.style.display='none'; }
+    }
+    applyTheme(localStorage.getItem(THEME_KEY) || 'light');
+    themeBtn.addEventListener('click', ()=>{ const cur=localStorage.getItem(THEME_KEY)||'light'; const next=cur==='light'?'dark':'light'; localStorage.setItem(THEME_KEY,next); applyTheme(next); });
+
+    // YEAR
+    document.getElementById('year').textContent = new Date().getFullYear();
+
+    // MOBILE NAV
+    const navBtn = document.querySelector('.nav-toggle'); const menu = document.getElementById('menu');
+    if (navBtn && menu){ navBtn.addEventListener('click', ()=>{ const open = menu.classList.toggle('open'); navBtn.setAttribute('aria-expanded', open ? 'true' : 'false'); }); }
+
+    // MOUSE TILT
+    const tilt = document.getElementById('tiltArea');
+    tilt.addEventListener('mousemove', (e)=>{
+      const b = tilt.getBoundingClientRect();
+      const x = (e.clientX - b.left) / b.width - 0.5;
+      const y = (e.clientY - b.top) / b.height - 0.5;
+      tilt.style.setProperty('--tiltX', (y * -6).toFixed(2) + 'deg');
+      tilt.style.setProperty('--tiltY', (x * 6).toFixed(2) + 'deg');
+    });
+    tilt.addEventListener('mouseleave', ()=>{ tilt.style.setProperty('--tiltX','0deg'); tilt.style.setProperty('--tiltY','0deg'); });
+
+    // ====== i18n ======
+    const LANG_KEY = 'pref-lang';
+    const dict = {
+      en: {
+        skip: "Skip to content",
+        brand: "Kamyar Kord",
+        nav_about: "About", nav_experience: "Experience", nav_education: "Education",
+        nav_projects: "Projects", nav_skills: "Skills", nav_contact: "Contact",
+        eyebrow: "Portfolio",
+        hero_title_1: "Energy Engineer", hero_title_2: "Building Energy Modeling",
+        hero_lead: "I design & simulate HVAC systems and optimize energy performance for LEED v4. I work with geothermal & multipurpose heat pumps and validate solutions in EnergyPlus & DesignBuilder.",
+        cta_cv: "Download CV", cta_work: "See my work",
+        meta_location: "Padova, Italy", meta_tools: "DesignBuilder • EnergyPlus • Python",
+        about_h: "About",
+        about_p: "I’m an Energy Engineer focused on building energy modeling, HVAC system design, and LEED v4 performance optimization. I translate complex simulations into clear decisions that reduce peak loads, cut energy, and meet comfort targets.",
+        exp_h: "Experience",
+        internship: "Internship", onsite: "On-site", hybrid: "Hybrid", loc_padova: "Padova, Italy",
+        prisma_title: "Energy Engineer", prisma_dates: "Oct 2024 – Jul 2025 · 10 mos",
+        prisma_b1: "Built LEED v4 baseline vs. proposed EnergyPlus/DesignBuilder models; documented end-use & peak analysis.",
+        prisma_b2: "Configured System 8 (VAV w/ reheat) baseline vs. geothermal + multipurpose HP proposed systems.",
+        prisma_b3: "Helped reduce modeled peak electricity ~50% while maintaining thermal comfort.",
+        nisoc_title: "Petroleum Engineer", nisoc_dates: "May 2018 – Jun 2018 · 2 mos",
+        nisoc_b1: "Supported field operations and daily production reporting.",
+        nisoc_b2: "Reviewed well test data and basic well integrity checks with supervisors.",
+        ndc_title: "Petroleum Engineer", ndc_dates: "Jun 2017 – Aug 2017 · 3 mos",
+        ndc_b1: "Shadowed drilling engineers on BHA selection, mud parameters, and safety briefings.",
+        ndc_b2: "Compiled daily drilling reports and equipment checklists with the team.",
+        edu_h: "Education",
+        edu_padova_title: "Università degli Studi di Padova",
+        edu_padova_deg: "Master’s degree, Energy Engineering",
+        edu_padova_dates: "Sep 2022 – Jun 2025",
+        edu_iau_title: "Islamic Azad University — Science & Research Branch",
+        edu_iau_deg: "B.E., Petroleum Engineering",
+        edu_iau_dates: "Oct 2014 – Nov 2018",
+        proj_h: "Projects", proj_p: "Highlight your key projects here.",
+        skills_h: "Skills",
+        contact_h: "Contact", contact_email_l: "Email:", contact_phone_l: "Phone:", contact_loc_l: "Location:"
+      },
+      it: {
+        skip: "Salta al contenuto",
+        brand: "Kamyar Kord",
+        nav_about: "Chi sono", nav_experience: "Esperienza", nav_education: "Formazione",
+        nav_projects: "Progetti", nav_skills: "Competenze", nav_contact: "Contatti",
+        eyebrow: "Portfolio",
+        hero_title_1: "Ingegnere Energetico", hero_title_2: "Building Energy Modeling",
+        hero_lead: "Progetto e simulo impianti HVAC e ottimizzo le prestazioni energetiche per LEED v4. Lavoro con pompe di calore geotermiche e polivalenti e valido le soluzioni in EnergyPlus e DesignBuilder.",
+        cta_cv: "Scarica CV", cta_work: "Vedi i miei lavori",
+        meta_location: "Padova, Italia", meta_tools: "DesignBuilder • EnergyPlus • Python",
+        about_h: "Chi sono",
+        about_p: "Sono un Ingegnere Energetico specializzato in modellazione energetica degli edifici, progettazione HVAC e ottimizzazione delle prestazioni per LEED v4. Trasformo simulazioni complesse in decisioni chiare che riducono i picchi, i consumi e garantiscono il comfort.",
+        exp_h: "Esperienza",
+        internship: "Tirocinio", onsite: "In sede", hybrid: "Ibrido", loc_padova: "Padova, Italia",
+        prisma_title: "Ingegnere Energetico", prisma_dates: "Ott 2024 – Lug 2025 · 10 mesi",
+        prisma_b1: "Modelli LEED v4 “baseline” vs. “proposed” in EnergyPlus/DesignBuilder; analisi dei consumi e dei picchi.",
+        prisma_b2: "Configurazione del Sistema 8 (VAV con reheat) vs. proposta con pompe di calore geotermiche e polivalenti.",
+        prisma_b3: "Riduzione ~50% del picco elettrico modellato mantenendo il comfort termico.",
+        nisoc_title: "Ingegnere Petrolifero", nisoc_dates: "Mag 2018 – Giu 2018 · 2 mesi",
+        nisoc_b1: "Supporto alle operazioni di campo e ai report giornalieri di produzione.",
+        nisoc_b2: "Revisione dati di well test e verifiche base di integrità pozzo con i supervisori.",
+        ndc_title: "Ingegnere Petrolifero", ndc_dates: "Giu 2017 – Ago 2017 · 3 mesi",
+        ndc_b1: "Affiancamento su selezione BHA, parametri di fango e safety briefing.",
+        ndc_b2: "Compilazione report giornalieri di perforazione e checklist attrezzature.",
+        edu_h: "Formazione",
+        edu_padova_title: "Università degli Studi di Padova",
+        edu_padova_deg: "Laurea Magistrale, Ingegneria Energetica",
+        edu_padova_dates: "Set 2022 – Giu 2025",
+        edu_iau_title: "Università Islamica Azad — Science & Research Branch",
+        edu_iau_deg: "Laurea, Ingegneria del Petrolio",
+        edu_iau_dates: "Ott 2014 – Nov 2018",
+        proj_h: "Progetti", proj_p: "Evidenzia qui i tuoi progetti principali.",
+        skills_h: "Competenze",
+        contact_h: "Contatti", contact_email_l: "Email:", contact_phone_l: "Telefono:", contact_loc_l: "Luogo:"
+      }
+    };
+
+    function applyLang(lang){
+      document.documentElement.lang = lang;
+      document.querySelectorAll('[data-i18n]').forEach(el=>{
+        const key = el.getAttribute('data-i18n');
+        const txt = (dict[lang] && dict[lang][key]) || '';
+        if (txt) el.textContent = txt;
+      });
+      // toggle active button state
+      document.querySelectorAll('.lang-btn').forEach(b => b.classList.toggle('active', b.dataset.lang===lang));
+    }
+
+    const initialLang = localStorage.getItem(LANG_KEY) || 'en';
+    applyLang(initialLang);
+
+    document.querySelectorAll('.lang-btn').forEach(btn=>{
+      btn.addEventListener('click', ()=>{
+        const lang = btn.dataset.lang;
+        localStorage.setItem(LANG_KEY, lang);
+        applyLang(lang);
+      });
+    });
+
+    // REVEAL ON SCROLL
+    const io = new IntersectionObserver((entries)=>{
+      entries.forEach(e=>{ if(e.isIntersecting){ e.target.classList.add('visible'); io.unobserve(e.target); }});
+    }, {threshold: 0.12});
+    document.querySelectorAll('.reveal').forEach(el=>io.observe(el));
+  </script>
+</body>
+</html>
