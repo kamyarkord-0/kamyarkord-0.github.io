@@ -81,12 +81,29 @@
     </div>
 
     <!-- Dynamic right visual -->
-    <div class="hero-right" id="tiltArea">
+    <div class="hero-right" id="tiltArea" aria-label="Gallery">
       <div class="blob"></div>
       <div class="ring r1"></div>
       <div class="ring r2"></div>
       <div class="dots"></div>
-      <img class="hero-photo" src="banner.png" alt="Portrait of Kamyar Kord" />
+
+      <!-- IMAGE SLIDER -->
+      <div class="slider" aria-roledescription="carousel">
+        <div class="slides">
+          <figure class="slide is-active">
+            <img src="banner.png" alt="Portrait 1 — Kamyar Kord">
+          </figure>
+          <figure class="slide">
+            <img src="banner2.png" alt="Portrait 2 — Kamyar Kord">
+          </figure>
+        </div>
+
+        <button class="slide-btn prev" aria-label="Previous slide" type="button">‹</button>
+        <button class="slide-btn next" aria-label="Next slide" type="button">›</button>
+
+        <div class="dots-nav" role="tablist" aria-label="Slide navigation"></div>
+      </div>
+
       <svg class="wave" viewBox="0 0 1440 120" preserveAspectRatio="none" aria-hidden="true">
         <path d="M0,64 C220,120 480,0 720,64 C960,128 1200,120 1440,80 L1440,120 L0,120 Z"></path>
       </svg>
@@ -325,7 +342,6 @@
         const txt = (dict[lang] && dict[lang][key]) || '';
         if (txt) el.textContent = txt;
       });
-      // toggle active button state
       document.querySelectorAll('.lang-btn').forEach(b => b.classList.toggle('active', b.dataset.lang===lang));
     }
 
@@ -345,6 +361,71 @@
       entries.forEach(e=>{ if(e.isIntersecting){ e.target.classList.add('visible'); io.unobserve(e.target); }});
     }, {threshold: 0.12});
     document.querySelectorAll('.reveal').forEach(el=>io.observe(el));
+
+    // ======================
+    // HERO SLIDER (manual + auto)
+    // ======================
+    (function(){
+      const slider = document.querySelector('.slider');
+      if(!slider) return;
+      const slides = Array.from(slider.querySelectorAll('.slide'));
+      const prevBtn = slider.querySelector('.prev');
+      const nextBtn = slider.querySelector('.next');
+      const dotsNav = slider.querySelector('.dots-nav');
+      const INTERVAL = 4500;
+
+      // Create dots
+      slides.forEach((_, i) => {
+        const dot = document.createElement('button');
+        dot.className = 'dot';
+        dot.type = 'button';
+        dot.setAttribute('aria-label', `Go to slide ${i+1}`);
+        dot.addEventListener('click', ()=>{ go(i); restart(); });
+        dotsNav.appendChild(dot);
+      });
+
+      let index = 0, timer = null;
+      function go(i){
+        index = (i + slides.length) % slides.length;
+        slides.forEach((s, idx) => s.classList.toggle('is-active', idx === index));
+        updateDots();
+      }
+      function updateDots(){
+        const dots = Array.from(dotsNav.children);
+        dots.forEach((d, i)=> d.classList.toggle('active', i === index));
+      }
+      function next(){ go(index + 1); }
+      function prev(){ go(index - 1); }
+      function start(){ timer = setInterval(next, INTERVAL); }
+      function stop(){ clearInterval(timer); timer = null; }
+      function restart(){ stop(); start(); }
+
+      prevBtn.addEventListener('click', ()=>{ prev(); restart(); });
+      nextBtn.addEventListener('click', ()=>{ next(); restart(); });
+
+      // Pause on hover
+      slider.addEventListener('mouseenter', stop);
+      slider.addEventListener('mouseleave', start);
+
+      // Keyboard
+      document.addEventListener('keydown', (e)=>{
+        if(e.key === 'ArrowLeft'){ prev(); restart(); }
+        if(e.key === 'ArrowRight'){ next(); restart(); }
+      });
+
+      // Swipe (touch)
+      let touchX = null;
+      slider.addEventListener('touchstart', (e)=>{ touchX = e.changedTouches[0].clientX; }, {passive:true});
+      slider.addEventListener('touchend', (e)=>{
+        if(touchX === null) return;
+        const dx = e.changedTouches[0].clientX - touchX;
+        if(Math.abs(dx) > 40){ dx < 0 ? next() : prev(); restart(); }
+        touchX = null;
+      }, {passive:true});
+
+      // Init
+      go(0); start();
+    })();
   </script>
 </body>
 </html>
