@@ -80,7 +80,7 @@
       </ul>
     </div>
 
-    <!-- Dynamic right visual (now a slider) -->
+    <!-- Dynamic right visual (slider) -->
     <div class="hero-right" id="tiltArea" aria-label="Gallery">
       <div class="blob"></div>
       <div class="ring r1"></div>
@@ -362,7 +362,7 @@
     document.querySelectorAll('.reveal').forEach(el=>io.observe(el));
 
     // ======================
-    // HERO SLIDER (manual + auto)
+    // HERO SLIDER (manual + auto, slower)
     // ======================
     (function(){
       const slider = document.querySelector('.slider');
@@ -371,7 +371,7 @@
       const prevBtn = slider.querySelector('.prev');
       const nextBtn = slider.querySelector('.next');
       const dotsNav = slider.querySelector('.dots-nav');
-      const INTERVAL = 4500;
+      const INTERVAL = 7000; // 7 seconds (slower)
 
       // Create dots
       slides.forEach((_, i) => {
